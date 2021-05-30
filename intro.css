@@ -6,6 +6,7 @@ body{
     background-image: url(./assets/images/fondo.jpeg);
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
 }
 .container {
    
