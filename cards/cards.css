@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Comic Neue', cursive;
+}
+
+.container {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    top: 60px;
+    left: calc(50% - 300px);
+    display: flex;
+}
+
+.card {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    overflow: hidden;
+}
+
+.primera{
+    background: url(https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/o/v/overlord_13.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.segunda{
+    background: url(https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/m/e/metal_opher.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.tercera{
+    background: url(https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/m/i/miles_morales_13.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.cuarta{
+    background: url(https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/g/h/ghoul_re_16.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.card h3 {
+    font-size: xx-large;
+    font-weight: bolder;
+    line-height: 5%;
+    color: black;
+    text-shadow: 3px 3px 5px black, -3px -3px 5px white;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover~.card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.descripcion {
+    height: 100%;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: justify;
+    padding: 1rem;
+    text-shadow: 3px 3px 5px black, -3px -3px 5px white;
+    padding-top: 150%;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(253, 187, 45, 0) 66%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(253, 187, 45, 0) 66%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(253, 187, 45, 0) 66%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#fdbb2d", GradientType=1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s ease-out;
+}
+
+.descripcion:hover {
+    padding-top: 40%;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(253, 187, 45, 0) 95%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(253, 187, 45, 0) 95%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(253, 187, 45, 0) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#fdbb2d", GradientType=1);
+}
+
+.btn-comic-info {
+    height: 20%;
+    width: 80%;
+    font-weight: 800;
+  font-style: italic;
+  font-size: xx-large;
+  color: purple;
+  line-height: 175%;
+  padding-left: 12%;
+    background: rgba(0, 128, 0, 0.40);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.btn-comic-info:hover{
+    color: greenyellow;
+    background: rgba(43, 0, 100, 0.4);
+    box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.67);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.btn-comic-info:active{
+    transform: translateY(.25rem);
+    text-shadow: 3px 3px 5px white, -3px -3px 5px black;
+}
+
+.title {
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 154, 217, 1) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+}
+
+.circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+svg {
+    fill: #17141d;
+    stroke-width: 2px;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
