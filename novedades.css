@@ -96,7 +96,7 @@ body {
 #containernovedades {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3.2rem 25% 3.2rem 25% 7%;
+    grid-template-rows: 3.2rem 1fr 3.2rem 1fr 7%;
     grid-template-areas: "nav"
         "contenido2"
         "busqueda"
