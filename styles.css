@@ -2,392 +2,96 @@
     padding: 0;
     margin: 0;
 }
-
-body {
-    overflow-x: hidden;
-    background: url(./assets/images/background.jpg);
-    background-position: center;
-    background-size: cover;
-    font-family: 'Comic Neue', cursive;
-    display: grid;
-}
-
 /* --------------------------------------------NAV/FOOTER----------------------------------------------------------- */
 /* Barra de navegacion */
 .nav {
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flexbox;
+    background-color: rgb(57, 141, 219);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
     width: 100%;
-    height: 4rem;
-    margin-top: 0.25rem;
+    height: 100%;
     grid-area: nav;
+    color: aliceblue;
+    text-align: center;
 }
 
 /* Barra de footer */
 .footer {
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flexbox;
+    background-color: rgb(27, 179, 226);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5; 
     width: 100%;
-    height: 4rem;
+    height: 100%;
     grid-area: footer;
+    color: aliceblue;
+    text-align: center;
 }
+
+/* ----------------------------------------------LOGIN-------------------------------------------------------------- */
+/* Pantalla de LOGIN */
+#containerlogin{
+    display: grid;
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+}
+
+/* #login {
+
+} */
 
 /* ----------------------------------------------INICIO------------------------------------------------------------- */
 /* Pantalla de inicio */
-#containerInicio {
+#containerInicio{
     display: grid;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: calc(1fr*.15) calc(1fr*.60) calc(1fr*.25) calc(1fr*10);
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 40% 40% 10%;
     grid-template-areas: "nav"
-        "banner"
-        "contenido1"
-        "footer";
-    row-gap: 10px;
+                         "banner"
+                         "contenido1"
+                         "footer";
+    row-gap: 5px;
+    column-gap: 5px;
 }
 
 #menuDiagonal {
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: brown;
     grid-area: banner;
     width: 100%;
     height: 70vh;
-}
-
-/* CSS de banner animado*/
-.flex-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: -webkit-flex;
-    /* Safari */
-    display: flex;
-    overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-    }
-}
-
-.flex-title {
-    color: #f1f1f1;
-    position: relative;
-    font-size: 6vw;
-    margin: auto;
+    color: aliceblue;
     text-align: center;
-    transform: rotate(90deg);
-    top: 15%;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
 }
 
-@media screen and (max-width: 768px) {
-    .flex-title {
-        transform: rotate(0deg) !important;
-    }
-}
-
-.flex-about {
-    opacity: 0;
-    color: #f1f1f1;
-    position: relative;
-    width: 70%;
-    font-size: 2vw;
-    padding: 5%;
-    top: 20%;
-    border: 2px solid #f1f1f1;
-    border-radius: 10px;
-    line-height: 1.3;
-    margin: auto;
-    text-align: left;
-    transform: rotate(0deg);
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-@media screen and (max-width: 768px) {
-    .flex-about {
-        padding: 0%;
-        border: 0px solid #f1f1f1;
-    }
-}
-
-.flex-slide {
-    -webkit-flex: 1;
-    /* Safari 6.1+ */
-    -ms-flex: 1;
-    /* IE 10 */
-    flex: 1;
-    cursor: pointer;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-}
-
-@media screen and (max-width: 768px) {
-    .flex-slide {
-        overflow: auto;
-        overflow-x: hidden;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .flex-slide p {
-        font-size: 2em;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .flex-slide ul li {
-        font-size: 2em;
-    }
-}
-
-.flex-slide:hover {
-    -webkit-flex-grow: 3;
-    flex-grow: 3;
-}
-
-.home {
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-macquarie-71208_1920.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-@media screen and (min-width: 768px) {
-    .home {
-        animation: aboutFlexSlide 3s 1;
-        animation-delay: 0s;
-    }
-}
-
-@keyframes aboutFlexSlide {
-    0% {
-        -webkit-flex-grow: 1;
-        flex-grow: 1;
-    }
-
-    50% {
-        -webkit-flex-grow: 3;
-        flex-grow: 3;
-    }
-
-    100% {
-        -webkit-flex-grow: 1;
-        flex-grow: 1;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .flex-title-home {
-        transform: rotate(90deg);
-        top: 15%;
-        animation: aboutFlexSlide 3s 1;
-        animation-delay: 0s;
-    }
-}
-
-@keyframes homeFlextitle {
-    0% {
-        transform: rotate(90deg);
-        top: 15%;
-    }
-
-    50% {
-        transform: rotate(0deg);
-        top: 15%;
-    }
-
-    100% {
-        transform: rotate(90deg);
-        top: 15%;
-    }
-}
-
-.flex-about-home {
-    opacity: 0;
-}
-
-@media screen and (min-width: 768px) {
-    .flex-about-home {
-        animation: aboutFlexSlide 3s 1;
-        animation-delay: 0s;
-    }
-}
-
-@keyframes flexAboutHome {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.about {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/beach-2089959_1280.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.contact-form {
-    width: 100%;
-}
-
-input {
-    width: 100%;
-}
-
-textarea {
-    width: 100%;
-}
-
-.contact {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-696098_1920.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.work {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/forest-208517_1280.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-.spinner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #222;
-    height: 100%;
-    width: 100%;
-    z-index: 11;
-    margin-top: 0;
-    color: #fff;
-    font-size: 1em;
-}
-
-.cube1,
-.cube2 {
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
-    animation: sk-cubemove 1.8s infinite ease-in-out;
-}
-
-.cube2 {
-    -webkit-animation-delay: -0.9s;
-    animation-delay: -0.9s;
-}
-
-@-webkit-keyframes sk-cubemove {
-    25% {
-        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-    }
-
-    50% {
-        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-    }
-
-    75% {
-        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    }
-
-    100% {
-        -webkit-transform: rotate(-360deg);
-    }
-}
-
-@keyframes sk-cubemove {
-    25% {
-        transform: translateX(42px) rotate(-90deg) scale(0.5);
-        -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-    }
-
-    50% {
-        transform: translateX(42px) translateY(42px) rotate(-179deg);
-        -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
-    }
-
-    50.1% {
-        transform: translateX(42px) translateY(42px) rotate(-180deg);
-        -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-    }
-
-    75% {
-        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-        -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-        -webkit-transform: rotate(-360deg);
-    }
-}
-
-/*Fin de CSS de banner animado*/
-
-#contenidoInicio {
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+#contenidoInicio{
+    background-color: rgb(44, 5, 82);
     grid-area: contenido1;
     width: 100%;
     height: 40vh;
+    color: aliceblue;
+    text-align: center;
 }
 
 /* ---------------------------------------------NOVEDADES----------------------------------------------------------- */
 /* Pantalla de novedades */
-#containernovedades {
+#containernovedades{
     display: grid;
-    background-color: chocolate;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: 10% 80% 10%;
     grid-template-areas: "nav"
-        "contenido2"
-        "footer";
+                         "contenido2"
+                         "footer";
     row-gap: 5px;
     column-gap: 5px;
 }
@@ -397,32 +101,65 @@ textarea {
     grid-area: contenido2;
     width: 100%;
     height: 80vh;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
 }
 
 /* ---------------------------------------------COLECCION----------------------------------------------------------- */
 /* pantalla de coleccion */
-#containercoleccion {
+#containercoleccion{
     display: grid;
-    background-color: darkcyan;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 40% 40% 10%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "nav"
+                         "contenido3"
+                         "footer";
+    row-gap: 5px;
+    column-gap: 5px;
 }
 
-/* #coleccion {} */
+#contenido3 {
+    background-color: rgb(44, 5, 82);
+    grid-area: contenido3;
+    width: 100%;
+    height: 80vh;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+}
 
 /* -----------------------------------------------DESEOS----------------------------------------------------------- */
 /* Pantalla de deseos */
-#containerdeseos {
+#containerdeseos{
     display: grid;
-    background-color: darkmagenta;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 5% 45% 45% 5%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "nav"
+                         "contenido4"
+                         "footer";
+    row-gap: 5px;
+    column-gap: 5px;
 }
 
-/* #deseos {
-
-} */
+#contenido4 {
+    background-color: rgb(44, 5, 82);
+    grid-area: contenido3;
+    width: 100%;
+    height: 80vh;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+}

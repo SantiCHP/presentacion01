@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.cards {
+    height: 300px;
+    width: 180px;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    border: 1px solid black;
+    border-radius: .5rem;
+    margin: 1.8rem;
+    box-shadow: 0px 4px 12px red;
+    backface-visibility: visible;
+    transform-origin: 50% 80%;
+    transform: perspective(500px) rotateY(0deg) rotate3d(1, 0, 0, 50deg) translate3d(0px, 0px, -15px);
+    transition: all .5s ease-in-out;
+}
+
+.cards:hover {
+    backface-visibility: visible;
+    transform: perspective(0px) rotateY(0deg) rotate3d(0, 0, 0, 0deg);
+}
+
+.n01{
+    background: url('https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/v/e/vengadores_premiere.jpg') center/cover;
+}
+
+.n02{
+    background: url('https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/e/s/espada_salvaje_conan_1979_1.jpg') center/cover;
+}
+
+.n03{
+    background: url('https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/d/e/death_metal_4.jpg') center/cover;
+}
+
+.n04{
+    background: url('https://cdn.normacomics.com/media/catalog/product/cache/1/image/588x473/9df78eab33525d08d6e5fb8d27136e95/t/i/titanes_33.jpeg') center/cover;
+}
+
+.modal-body div{
+    overflow: hidden;
+}
