@@ -22,13 +22,13 @@ body {
     min-height: 100%;
 } */
 
-#aside {}
+/* #aside {}
 
 
 #slider {}
 
 
-#player {}
+#player {} */
 
 .nav {
     grid-area: nav;
@@ -46,7 +46,6 @@ body {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
-    /* width: 57.5%; */
     height: 93%;
     margin: 0.15rem 0 0 0;
     font-weight: 700;
