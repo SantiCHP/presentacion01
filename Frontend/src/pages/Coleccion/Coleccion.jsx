@@ -3,7 +3,7 @@ import React from 'react'
 const Coleccion = () => {
     return (
         <div>
-            <h1>Ñordo</h1>
+            <h1>Ñordo de pagina hecha por ñorditos</h1>
         </div>
     )
 }

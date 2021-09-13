@@ -202,13 +202,13 @@ const Galeria = () => {
                 </div>
             </div>
 
-            <div className="footer">
+            {/* <div className="footer">
                 <p>Esta aplicación esta hecha por Santi&copy;, Aco&copy; y Alexis&copy; con mucho esfuerzo y ganas de aprender <i
                         className="fas fa-biohazard"></i></p>
                 <p> <a href="mailto:santiagocarmelo.c
                     astellanohernandez_29#alumno.academiadf.com">Contacta con nosotros
                         <i className="fas fa-file-signature"></i></a> </p>
-            </div>
+            </div> */}
         </div>
     </div>
     <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
