@@ -21,6 +21,7 @@ function App() {
        <Route exact path='/tsundoku/coleccion'>
          <Coleccion />
        </Route>
+       <Redirect to="/tsundoku/inicio"/>
      </Switch>
      <Footer />
    </Router>
