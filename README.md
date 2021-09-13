@@ -1,3 +1,8 @@
+Referencia de valores de los objetos creados:
+Comics:
+
+
+
 Referencias para la creación de la app
 - Banner de categorías principales:
 https://codepen.io/creativeocean/pen/XWpowEj
