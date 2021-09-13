@@ -1,0 +1,15 @@
+#menu{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 83%;
+}
+
+ul li a{
+    text-decoration: none;
+    list-style: none;
+}
+
+#buttonHome{
+    text-decoration: none;
+    list-style: none;
+}
