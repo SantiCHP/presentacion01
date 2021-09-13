@@ -1,8 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+    // // Funcion para el logout de la Sesion
+    // const logout = () =>{
+    //     if(localStorage.getItem("userData").length <= 0){
+    //         console.log("No tiene token de usuario no deberia estar aqui.");
+    //     }else{
+    //         localStorage.removeItem("userData");
+    //         // return <Redirect to="/login"/>
+    //     }
+    // }
 return (
 <div>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,7 +26,7 @@ return (
 
                 <li className="nav-item"><Link to="/tsundoku/Coleccion" id='buttonHome'><a className="nav-link" href="#">Colección</a></Link></li>
 
-                {/* <li className="nav-item"><Link to="/tsundoku/Logout" id='buttonHome'><a className="nav-link" href="#">Log Out</a></Link></li> */}
+                {/* <li className="nav-item"><Link to="/tsundoku/Logout" id='buttonHome' onClick={logout()}><a className="nav-link" href="#">Log Out</a></Link></li> */}
 
                 </ul>
             </div>
