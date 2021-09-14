@@ -3,7 +3,7 @@ import './Galeria.css';
 
 const Galeria = () => {
     return (
-        <div>
+        <div className="me-2">
         <div id="fondo">
         <div id="aside">
             <div id="slider">

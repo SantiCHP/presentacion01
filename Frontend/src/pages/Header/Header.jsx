@@ -14,11 +14,10 @@ const Header = () => {
     // }
 return (
 <div>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-        <Link to="/tsundoku/Inicio" id='buttonHome'><a className="navbar-brand" href="#">TSUNDOKU</a></Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100 ms-2 mt-2" id="barra">
+        <Link to="/tsundoku/Inicio" id='buttonHome'><a className="navbar-brand ps-3" href="#" id="logo">TSUNDOKU</a></Link>
             <div className="collapse navbar-collapse" id="navbarColor02">
-                <ul className="navbar-nav me-auto" id='menu'>
+                <ul className="navbar-nav" id='menu'>
 
                 <li className="nav-item"><Link to="/tsundoku/Inicio" id='buttonHome'><a className="nav-link" href="#">Inicio</a></Link></li>
 
@@ -30,7 +29,6 @@ return (
 
                 </ul>
             </div>
-        </div>
     </nav>
 </div>
 )
