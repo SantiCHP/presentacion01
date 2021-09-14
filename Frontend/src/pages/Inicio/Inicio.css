@@ -13,7 +13,7 @@
       "presentacion"
       "footer"
     ;
-    row-gap: .5rem;
+    a-gap: .5rem;
     width: 100%;
     height: 100vh;
     justify-items: center;
@@ -90,57 +90,60 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 63vh;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-direction: column;
   }
   
-  .row {
+  .a {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    /* justify-content: center; */
+    flex-direction: a;
     padding: 0 10px 0 10px;
   }
   
-  .row .img {
+  .a .img {
     width: 25%;
     height: 63vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: width 0.4s ease-in-out;
+    /* transition: width 5.4s ease-in-out; */
     border-radius: .5rem;
     box-shadow: 0 18px 32px 0 rgba(31, 38, 135, 0.37);
   }
   
   .img:hover {
+    /* position: absolute; */
     width: 100%;
+    transition: width 1.4s, height 1.4s ease-in-out;
   }
   
-  .row .image-one {
+  .a .image-one {
     /* background-image: url("https://static-asset-delivery.hasbroapps.com/d4d8ccc5d7283c12117ccb3db9024ed79cdf4fef/93b566648f2f8a121d123b2a48a9650c.png"); */
     background-image: url("https://wallpapercave.com/wp/wp5875787.jpg");
     border: 5px solid white;
     box-shadow: inset 0 0 10px;
   }
   
-  .row .image-two {
+  .a .image-two {
     background-image: url("https://i0.wp.com/hipertextual.com/wp-content/uploads/2015/02/dc-comics-universe.jpg?w=1280&ssl=1");
     border: 5px solid black;
     box-shadow: inset 0 0 10px;
   }
   
-  .row .image-three {
+  .a .image-three {
     background-image: url("https://www.clementoni.com/media/prod/de/25718/marvel-avengers-104-teile-supercolor-puzzle_B0MX0mB.jpg");
     border: 5px solid white;
     box-shadow: inset 0 0 10px;
   }
   
-  .row .image-four {
+  .a .image-four {
     background-image: url("https://culturageek.com.ar/wp-content/uploads/2020/10/Culturageek.com_.ar-One-Piece-1.jpg");
     border: 5px solid black;
     box-shadow: inset 0 0 10px;
