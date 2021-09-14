@@ -33,6 +33,6 @@
     box-shadow: 0 18px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-.btn .btn-warning .btn-sm .fas .fa-heart {
+.btn .btn-warning .btn-sm .fas .fa-heart:active {
     color: red !important;
 }
