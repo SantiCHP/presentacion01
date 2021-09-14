@@ -7,7 +7,7 @@ return (
 <div>
     {/* Pasar a clasName todo lo correspondiente de CSS puro */}
     <div className="banner">
-        <div className="row">
+        <div className="a">
             <div className="img image-one"></div>
             <div className="img image-two"></div>
             <div className="img image-three"></div>
