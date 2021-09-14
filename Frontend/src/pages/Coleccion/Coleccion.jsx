@@ -1,4 +1,5 @@
 import React from 'react'
+import './Coleccion.css'
 
 const Coleccion = () => {
     return (
@@ -8,9 +9,9 @@ const Coleccion = () => {
                     <div type="button" className="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         +INFO
                     </div>
-                    <div type="button" className="btn btn-warning btn-sm fas fa-heart" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div type="button" className="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fas fa-heart"></i>
                     </div>
-                    <div type="button" className="btn btn-warning btn-sm fas fa-award" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div type="button" className="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fas fa-award"></i>
                     </div>
                 </div>
                 <div className="cards n02">
