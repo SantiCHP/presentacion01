@@ -13,6 +13,7 @@ body {
     background-image: url(./background/ZenBG-1.png), url(./background/ZenBG-2.png);
     background-repeat: repeat-x, repeat;
 }
+/* Patata */
 
 #myVideo {
     position: fixed;
