@@ -116,12 +116,12 @@
     /* transition: width 5.4s ease-in-out; */
     border-radius: .5rem;
     box-shadow: 0 18px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: width 1.4s, height 1.4s ease-in-out;
   }
   
   .img:hover {
     /* position: absolute; */
     width: 100%;
-    transition: width 1.4s, height 1.4s ease-in-out;
   }
   
   .a .image-one {
