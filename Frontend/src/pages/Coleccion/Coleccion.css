@@ -33,6 +33,10 @@
     box-shadow: 0 18px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
+
+.fas .fa-heart {
+    color: red !important;
+}
 i.fas.fa-heart{
     color:red;
 }

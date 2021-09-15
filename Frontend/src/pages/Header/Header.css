@@ -51,3 +51,27 @@ ul li a{
     text-decoration: none;
     list-style: none;
 }
+
+#barra{
+    background-color: #9359a9 !important;
+    border-radius: 6px !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+    position: absolute !important;
+    position: fixed !important;
+    z-index: 5;
+}
+
+#logo{
+    color: #57bf4f !important;
+    text-shadow:
+    0 0px 9.6px rgba(0, 0, 0, 0.048),
+    0 0px 22.5px rgba(0, 0, 0, 0.062),
+    0 0px 42.8px rgba(0, 0, 0, 0.068),
+    0 0px 83.3px rgba(225, 225, 225, 225.07),
+    0 0px 223px rgba(225, 225, 225, 225.07)
+  ;
+  
+
+}
+

@@ -1,5 +1,7 @@
 import React from 'react'
+import "./Coleccion.css"
 import './Coleccion.css'
+
 
 const Coleccion = () => {
     return (

@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <div className="header">
       <Header />
+        </div>
      <Switch>
         <Route exact path='/tsundoku/inicio'>
          <Inicio />
