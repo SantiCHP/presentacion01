@@ -23,6 +23,11 @@ Nav{
 }
 .buttonHome.navbar-toggler{
     margin-right: 0.6rem;
+    border-radius: 48%;  
+}
+.buttonHome.navbar-toggler:focus{
+    box-shadow: none;  
+    border:2px #57bf4f solid;
 }
 Nav .me-auto{
     width: 100%;
