@@ -1,14 +1,14 @@
 .divLogin{
-    height: 79%;
+    height:90%;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 7%;
     font-family: "Poppins", sans-serif;
 }
 .formLogin {
     min-height: 65%;
     width: 40%;
     margin: 0 auto;
-    padding-top: 0px;
+    /* padding-top: 0px; */
     background: white;
     background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
