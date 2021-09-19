@@ -280,3 +280,13 @@ body {
 .fa-file-signature:hover {
     color: greenyellow;
 }
+
+/* CSS PARA LAS TARJETAS DEL COMIC */
+.tarjetitaComic{
+    height: 40%;
+    width: 50%;
+    background-color: #dadce0;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+}

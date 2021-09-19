@@ -1,7 +1,23 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './Galeria.css';
-
+import axios from "axios"
 const Galeria = () => {
+    // Variable para los comics
+    const [comics,setComics]=useState([]);
+    // Funcion para ver todos los comics
+    const verComics = async ()=>{
+        axios.get("http://tsundoku-application.herokuapp.com/api/tsundoku/comics/")
+        .then((response)=>{
+            console.log(response.data.comics);
+            setComics(response.data.comics);
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
+    // UseEffect para que se realice la peticion solo una vez
+    useEffect(()=>{verComics()},[]);
+
     return (
         <div className="me-2">
         <div id="fondo">
@@ -11,21 +27,32 @@ const Galeria = () => {
             <div id="player">
             </div>
             <div id="contenido2">
-                <div className="cards n01">
+                {/* <div className="cards n01">
                     <div type="button" className="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         +INFO
                     </div>
                 </div>
                 <div className="cards n02">
-
+                    
                 </div>
                 <div className="cards n03">
 
                 </div>
                 <div className="cards n04">
 
-                </div>
-                <div className="cards n01">
+                </div> */}
+
+                {/* Map con el contenido de los comics */}
+                {comics.map((info)=>{
+                return(<div className="tarjetitaComic">
+                    <p>Autor:{info.autor}</p>
+                    <p>Coleccion:{info.coleccion}</p>
+                    <p>Editorial:{info.editorial}</p>
+                    <p>Serie:{info.serie}</p>
+                    <p>Titulo:{info.titulo}</p>
+                </div>);
+                    })}
+                {/* <div className="cards n01">
                     <div type="button" className="btn btn- btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         +INFO
                     </div>
@@ -80,9 +107,9 @@ const Galeria = () => {
                 </div>
                 <div className="cards n04">
 
-                </div>
+                </div>*/}
 
-            </div>
+                </div>
             <div id="busqueda">
                 <form id="search-form">
                 </form>
