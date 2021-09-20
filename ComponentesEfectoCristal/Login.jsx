@@ -25,13 +25,13 @@ const Login = (props) => {
         // Envío de los datos del formulario ( data ) al servidor
 		// console.log(data);
 			await axios
-            .post('urldelapeticion', {
-                // email: data.email,
-                // password: data.password,
+            .post('http://tsundoku-application.herokuapp.com/api/tsundoku/usuarios/login', {
+                email: data.email,
+                password: data.password,
             })
             .then((response) => {
                 console.log('Login Correcto');
-                gestionarAcceso(response.data);
+                // gestionarAcceso(response.data);
                 // Aqui, una vez logueado con exito lo redireccionamos al componente main por su ruta definida en el APP.js
                 // history.push("/main");
                 // enviamos a la App la respuesta del servidor, que contiene el token creado por este
