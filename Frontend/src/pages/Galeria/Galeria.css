@@ -18,13 +18,17 @@ body {
     min-height: 100%;
 } */
 
-/* #aside {}
+#aside{
+    display:flex;
+    flex-direction:column;
+    overflow: hidden;
+}
 
 
-#slider {}
+/* #slider {}
 
 
-#player {} */
+#player {} */ */
 
 .nav {
     grid-area: nav;
@@ -119,14 +123,8 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     width: 100%;
-    height: auto;
+    height: 68vh;
     overflow-y: scroll;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
 }
 
 #contenido2::-webkit-scrollbar {

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import axios from "axios";
 import { useState,useEffect } from "react";
 import Header from "./pages/Header/Header.jsx";
 import Inicio from "./pages/Inicio/Inicio.jsx";
@@ -28,6 +29,18 @@ function App() {
        JSON.stringify({ idUsuario: dato.idUsuario, token: dato.token })
      );
    };
+   // Variable para los comics
+   const [comics, setComics] = useState([]);
+   const verComics = async() => {
+           axios.get("http://tsundoku-application.herokuapp.com/api/tsundoku/comics/")
+               .then((response) => {
+                   console.log(response.data.comics);
+                   setComics(response.data.comics);
+               })
+               .catch((error) => {
+                   console.log(error);
+               })
+       }
     // Cada vez que se recarga la pagina se renderiza el componente y se leen los datos
   useEffect(() => {
     const datosRecuperar = JSON.parse(localStorage.getItem('userData'));
@@ -36,12 +49,14 @@ function App() {
     }
     console.log(datosRecuperar);
   }, []);
+   // UseEffect para que se realice la peticion solo una vez
+   useEffect(() => { verComics() }, []);
   return (
     <div className="App">
       <Router>
-        <div className="header">
+       {/* <div className="header">
       <Header />
-        </div>
+        </div> */}
      <Switch>
         <Route exact path='/tsundoku/'>
          <Login gestionarAcceso={gestionarAcceso}/>
@@ -53,7 +68,7 @@ function App() {
          <Inicio/>
        </Route>
        <Route exact path='/tsundoku/galeria'>
-         <Galeria />
+       <Galeria key={comics._id} dataComics={comics} onVerComics={verComics}/>
        </Route>
        <Route exact path='/tsundoku/coleccion'>
          <Coleccion />

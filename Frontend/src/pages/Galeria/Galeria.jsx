@@ -1,22 +1,31 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect} from 'react';
+import ComicCard from '../../components/card/ComicCard.jsx';
 import './Galeria.css';
-import axios from "axios"
-const Galeria = () => {
+// import axios from "axios"
+const Galeria = (props) => {
+    //Variable que carga los props del get de comics desde App.js
+    const listaComics = props.dataComics;
+    const verComics = props.verComics;
+    console.log(listaComics);
     // Variable para los comics
-    const [comics,setComics]=useState([]);
-    // Funcion para ver todos los comics
-    const verComics = async ()=>{
-        axios.get("http://tsundoku-application.herokuapp.com/api/tsundoku/comics/")
-        .then((response)=>{
-            console.log(response.data.comics);
-            setComics(response.data.comics);
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
-    }
-    // UseEffect para que se realice la peticion solo una vez
-    useEffect(()=>{verComics()},[]);
+    // const [comics,setComics]=useState([]);
+    // // Funcion para ver todos los comics
+    // const verComics = async ()=>{
+    //     axios.get("http://tsundoku-application.herokuapp.com/api/tsundoku/comics/")
+    //     .then((response)=>{
+    //         console.log(response.data.comics);
+    //         setComics(response.data.comics);
+    //     })
+    //     .catch((error)=>{
+    //         console.log(error);
+    //     })
+    // }
+    // // UseEffect para que se realice la peticion solo una vez
+    // useEffect(()=>{verComics()},[]);
+    const handlerLanzaListaComics = (()=>{
+        props.onVerComics();
+    });
+    useEffect(()=>{handlerLanzaListaComics()},[]);
 
     return (
         <div className="me-2">
@@ -43,14 +52,10 @@ const Galeria = () => {
                 </div> */}
 
                 {/* Map con el contenido de los comics */}
-                {comics.map((info)=>{
-                return(<div className="tarjetitaComic">
-                    <p>Autor:{info.autor}</p>
-                    <p>Coleccion:{info.coleccion}</p>
-                    <p>Editorial:{info.editorial}</p>
-                    <p>Serie:{info.serie}</p>
-                    <p>Titulo:{info.titulo}</p>
-                </div>);
+                {listaComics.map((info)=>{
+                return(
+                    <ComicCard key={info._id} info={info} />
+                );
                     })}
                 {/* <div className="cards n01">
                     <div type="button" className="btn btn- btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
