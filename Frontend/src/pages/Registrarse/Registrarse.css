@@ -36,13 +36,17 @@ form{
     display: flex;
     flex-direction: column;
 }
-input, button {
+input, button, .enlace {
     background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
     border: none;
     margin: 2% auto;
     padding: 0.5rem;
     text-align: center;
     border-radius: 2rem;
+}
+.enlace{
+    text-decoration: none;
+    color:black;
 }
 input::placeholder{
     color: #426696;
@@ -51,7 +55,7 @@ input{
     height: 2rem;
     width: 80%;
 }
-input[type=submit]{
+input[type=submit], .enlace{
     width: 40%;
     border:0.07rem solid #426696;
 }

@@ -28,7 +28,7 @@ const {
 		// Envío de los datos del formulario ( data ) al servidor
 		console.log(data);
 			await axios
-				.post('http://tsundoku-application.herokuapp.com/api/tsundoku/usuarios/alta', {
+				.post('https://tsundoku-application.herokuapp.com/api/tsundoku/usuarios/alta', {
                     nombre:data.nombre,
 					email: data.email,
 					password: data.password,
@@ -37,9 +37,7 @@ const {
 					console.log('Registro Correcto');
                     // enviamos a la App la respuesta del servidor, que contiene el token creado por este
 					gestionarAcceso(response.data);
-					<Router>
-						<Redirect to="/tsundoku/inicio"/>
-					</Router>
+					history.push("/tsundoku/");
 				})
 				.catch((error) => {
 					console.log(error);
@@ -47,53 +45,54 @@ const {
 				});
 	};
     return (
-        <div className="divLogin">
-            <div className="formLogin">
-                <h2>Registrarse</h2>
-				<form onSubmit={handleSubmit(onSubmit)}>
-                    <input
-						type='text'
-						placeholder='Nombre'
-						{...register('nombre', { required: true, pattern: /^\S+@\S+$/i })}
-					/>
-					{errors.nombre && errors.nombre.type === 'required' && (
-						<span>Se requiere nombre de Usuario</span>
-					)}
-					<input
-						type='text'
-						placeholder='Email'
-						{...register('email', { required: true, pattern: /^\S+@\S+$/i })}
-					/>
-					{errors.email && errors.email.type === 'required' && (
-						<span>Se requiere e-mail válido</span>
-					)}
-					{errors.email && errors.email.type === 'pattern' && (
-						<span>Se requiere e-mail válido</span>
-					)}
-					<input
-						type='password'
-						placeholder='Password'
-						{...register('password', { required: true, minLength: 8 })}
-					/>
-					{errors.password && errors.password.type === 'required' && (
-						<span>Se requiere contraseña</span>
-					)}
-					{errors.password && errors.password.type === 'minLength' && (
-						<span>Mínimo de 8 caracteres</span>
-					)}
-					<div className="botonesForm">
-						<input type='submit' value="Registrarse"/>
-						<input type='submit' onClick={()=>onSubmit()} value="Login"/>
-					</div>
-				</form>
-				{/* <button><Router><Link to="/" className="">Registrarse</Link></Router></button> */}
-			</div>
-			<div class="circle1"></div>
-    		<div class="circle2"></div>
-
-        
+      <div className="divLogin">
+        <div className="formLogin">
+          <h2>Registrarse</h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder="Nombre"
+              {...register("nombre", { required: true, pattern: /^\S+@\S+$/i })}
+            />
+            {errors.nombre && errors.nombre.type === "required" && (
+              <span>Se requiere nombre de Usuario</span>
+            )}
+            <input
+              type="text"
+              placeholder="Email"
+              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+            />
+            {errors.email && errors.email.type === "required" && (
+              <span>Se requiere e-mail válido</span>
+            )}
+            {errors.email && errors.email.type === "pattern" && (
+              <span>Se requiere e-mail válido</span>
+            )}
+            <input
+              type="password"
+              placeholder="Password"
+              {...register("password", { required: true, minLength: 8 })}
+            />
+            {errors.password && errors.password.type === "required" && (
+              <span>Se requiere contraseña</span>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <span>Mínimo de 8 caracteres</span>
+            )}
+            <div className="botonesForm">
+              <input type="submit" value="Registrarse" />
+              {/* <input type='submit' value="Registrarse"/> */}
+                <Link to="/tsundoku/" className="enlace">
+                  Cancelar
+                </Link>
+            </div>
+          </form>
+          {errorForm != "" ? <div>{errorForm}</div> : null}
         </div>
-    )
+        <div className="circle1"></div>
+        <div className="circle2"></div>
+      </div>
+    );
 }
 
 export default Registrarse

@@ -13,6 +13,8 @@ const Login = (props) => {
     const { gestionarAcceso } = props;
     // variable de estado que indica si el usuario existe o no en la base de datos.
 	const [tieneAcceso, setTieneAcceso] = useState(false); 
+	// Variable para las redirecciones
+	const history = useHistory();
     // Variables que se usan en los formularios de react
     const {
 		register,
@@ -20,7 +22,6 @@ const Login = (props) => {
 		setValue,
 		formState: { errors },
 	} = useForm(); // hook del formulario para 'react-hook-form'
-
 	const[errorForm,setErrorForm] = useState("");
     const onSubmit = async(data) =>{
         // Envío de los datos del formulario ( data ) al servidor
@@ -72,14 +73,14 @@ const Login = (props) => {
 					<div className="botonesForm">
 
 						<input type='submit' value="Login"/>
-						<input type='submit' value="Registrarse"/>
+						<Link to="/tsundoku/alta" className="enlace">Registrarse</Link>
+						{/* <input type='submit' value="Registrarse"/> */}
 					</div>
 				</form>
 				{errorForm!=""?<div>{errorForm}</div>:null}
-				{/* <button><Router><Link to="/" className="">Registrarse</Link></Router></button> */}
 			</div>
-			<div class="circle1"></div>
-    		<div class="circle2"></div>
+			<div className="circle1"></div>
+    		<div className="circle2"></div>
         </div>
     )
 }

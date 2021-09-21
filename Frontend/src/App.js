@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import Header from "./pages/Header/Header.jsx";
 import Inicio from "./pages/Inicio/Inicio.jsx";
 import Galeria from "./pages/Galeria/Galeria.jsx";
+import Registrarse from "./pages/Registrarse/Registrarse";
 import Coleccion from "./pages/Coleccion/Coleccion.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
 import Login from "./pages/Login/Login.jsx";
@@ -44,6 +45,9 @@ function App() {
      <Switch>
         <Route exact path='/tsundoku/'>
          <Login gestionarAcceso={gestionarAcceso}/>
+        </Route>
+        <Route exact path='/tsundoku/alta'>
+         <Registrarse gestionarAcceso={gestionarAcceso}/>
         </Route>
         <Route exact path='/tsundoku/inicio'>
          <Inicio/>
